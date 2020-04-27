@@ -2,10 +2,12 @@
 
 This Android project showcases the steps to publish and consume Android Libraries on the GitHub Package Registry. It is made up of 2 modules 
 1.  ##### sampleAndroidLibrary
+   	
    	- Android library module with basic math functionality
    	- Publishes the generated library file onto the GitHub Package Registry
    	- The build.gradle file inside this module has the code (plugin, tasks and authentication) related to publishing the library
 2.  #####  app
+		
 		- Sample Android application module with the build.gradle file that shows the code for consuming an Android library from GitHub Package Registry.
  
 ------------
