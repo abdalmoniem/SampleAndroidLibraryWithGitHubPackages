@@ -2,30 +2,27 @@
 
 This Android project showcases the steps to publish and consume Android Libraries on the GitHub Package Registry. It is made up of 2 modules 
 1.  ##### sampleAndroidLibrary
-   	
-   	- Android library module with basic math functionality
-   	- Publishes the generated library file onto the GitHub Package Registry
-   	- The build.gradle file inside this module has the code (plugin, tasks and authentication) related to publishing the library
-2.  #####  app
-		
-		- Sample Android application module with the build.gradle file that shows the code for consuming an Android library from GitHub Package Registry.
+	- Android library module with basic math functionality
+	- Publishes the generated library file onto the GitHub Package Registry
+	- The build.gradle file inside this module has the code (plugin, tasks and authentication) related to publishing the library
+2.  #####  app		
+	- Sample Android application module with the build.gradle file that shows the code for consuming an Android library from GitHub Package Registry.
  
 ------------
 ## Part 1 Publishing an Android library to GitHub Package Registry
 
 #### Step 1 Generate a Personal Access Token for GitHub
 - Inside you GitHub account:
-   - Settings -> Developer Settings -> Personal Access Tokens -> Generate new token
-   - Make sure you select the following scopes (" write:packages", " read:packages") and Generate a token
-   - After Generating make sure to copy your new personal access token. You won’t be able to see it again!
+- Settings -> Developer Settings -> Personal Access Tokens -> Generate new token
+- Make sure you select the following scopes (" write:packages", " read:packages") and Generate a token
+- After Generating make sure to copy your new personal access token. You won’t be able to see it again!
 
 #### Step 2 Store your GitHub - Personal Access Token details
 - Create a **github.properties** file within your root Android project
 - In case of a public repository make sure you  add this file to .gitignore to keep the token private
-   - Add properties **gpr.usr**=*GITHUB_USERID* and **gpr.key**=*PERSONAL_ACCESS_TOKEN*
-   - Replace **GITHUB_USERID** with personal / organisation Github UserID and **PERSONAL_ACCESS_TOKEN** with the token generated in [**Step 1**](#step-1-generate-a-personal-access-token-for-github)
-   - The file should look like this:
-
+- Add properties **gpr.usr**=*GITHUB_USERID* and **gpr.key**=*PERSONAL_ACCESS_TOKEN*
+- Replace **GITHUB_USERID** with personal / organisation Github UserID and **PERSONAL_ACCESS_TOKEN** with the token generated in [**Step 1**](#step-1-generate-a-personal-access-token-for-github)
+- The file should look like this:
    ```javascript
    gpr.usr=GITHUB_USERID
    gpr.key=PERSONAL_ACCESS_TOKEN
