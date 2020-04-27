@@ -19,19 +19,18 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    android.applicationVariants.all { variant ->
+        def appName
+        //Check if an applicationName property is supplied; if not use the name of the parent project.
+        if (project.hasProperty("applicationName")) {
+            appName = applicationName
+        } else {
+            appName = parent.name
+        }
 
-        android.applicationVariants.all { variant ->
-            def appName
-            //Check if an applicationName property is supplied; if not use the name of the parent project.
-            if (project.hasProperty("applicationName")) {
-                appName = applicationName
-            } else {
-                appName = parent.name
-            }
-
-            variant.outputs.all { output ->
-                outputFileName = "${appName}-${output.baseName}-${variant.versionName}.apk"
-            }
+        variant.outputs.all { output ->
+            outputFileName = "${appName}-${output.baseName}-${variant.versionName}.apk"
         }
     }
 

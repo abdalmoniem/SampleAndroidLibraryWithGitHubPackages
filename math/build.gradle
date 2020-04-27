@@ -32,11 +32,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
 
-        android.libraryVariants.all { variant ->
-            variant.outputs.all { output ->
-                outputFileName = "${getArtifactId()}-${output.baseName}-${getVersionName()}.aar"
-            }
+    android.libraryVariants.all { variant ->
+        variant.outputs.all { output ->
+            outputFileName = "${getArtifactId()}-${output.baseName}-${getVersionName()}.aar"
         }
     }
 
@@ -50,7 +50,7 @@ publishing {
             version getVersionName()
             android.libraryVariants.all { variant ->
                 variant.outputs.all { output ->
-                    artifact("${getArtifactId()}-${output.baseName}-${getVersionName()}.aar")
+                    artifact("$buildDir/outputs/aar/${getArtifactId()}-${output.baseName}-${getVersionName()}.aar")
                 }
             }
         }
