@@ -45,7 +45,7 @@ android {
 publishing {
     publications {
         bar(MavenPublication) {
-            groupId 'com.abdalmoniem.libraries' // Replace with group ID
+            groupId 'com.hifnawy.libraries' // Replace with group ID
             artifactId getArtifactId()
             version getVersionName()
             artifact("$buildDir/outputs/aar/${getArtifactId()}-release-${getVersionName()}.aar")

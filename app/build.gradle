@@ -33,13 +33,19 @@ android {
             outputFileName = "${appName}-${output.baseName}-${variant.versionName}.apk"
         }
     }
+}
 
+repositories {
+    maven {
+        url 'https://maven.pkg.github.com/abdalmoniem/SampleAndroidLibraryWithGitHubPackages'
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation project(path: ':math')
+//    implementation 'com.hifnawy.libraries:sampleAndroidLibrary:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'

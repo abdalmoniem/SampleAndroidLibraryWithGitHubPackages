@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff00ff88"/>
+    </FrameLayout>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -20,6 +31,6 @@
         android:textColor="#ff000000"
         android:fontFamily="casual"
         android:textStyle="bold"
-        android:onClick="GenerateRandomMathOperation"/>
+        android:onClick="GenerateRandomMathOperation" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

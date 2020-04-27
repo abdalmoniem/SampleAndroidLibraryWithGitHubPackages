@@ -1,8 +1,8 @@
 package com.hifnawy.math;
 
 public class MathOperations {
-    int firstNumber;
-    int secondNumber;
+    private int firstNumber;
+    private int secondNumber;
 
     public MathOperations() {
     }
