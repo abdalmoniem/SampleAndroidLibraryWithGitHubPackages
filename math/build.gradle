@@ -45,7 +45,7 @@ android {
 publishing {
     publications {
         bar(MavenPublication) {
-            groupId 'com.enefce.libraries' // Replace with group ID
+            groupId 'com.abdalmoniem.libraries' // Replace with group ID
             artifactId getArtifactId()
             version getVersionName()
             artifact("$buildDir/outputs/aar/${getArtifactId()}-release-${getVersionName()}.aar")
@@ -58,7 +58,7 @@ publishing {
             /** Configure path of your package repository on Github
              *  Replace GITHUB_USERID with your/organisation Github userID and REPOSITORY with the repository name on GitHub
              */
-            url = uri("https://maven.pkg.github.com/GITHUB_USERID/REPOSITORY")
+            url = uri("https://maven.pkg.github.com/abdalmoniem/SampleAndroidLibraryWithGitHubPackages")
 
             credentials {
                 /**Create github.properties in root project folder file with gpr.usr=GITHUB_USER_ID  & gpr.key=PERSONAL_ACCESS_TOKEN**/
