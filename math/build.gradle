@@ -10,7 +10,7 @@ def getVersionName = { ->
 }
 
 def getArtifactId = { ->
-    return "sampleAndroidLibraryWithGitHubPackages" // Replace with library name ID
+    return "sampleAndroidLibrary" // Replace with library name ID
 }
 
 android {
@@ -32,6 +32,12 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+        android.libraryVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = "${getArtifactId()}-${output.baseName}-${getVersionName()}.aar"
+            }
+        }
     }
 
 }
@@ -42,7 +48,11 @@ publishing {
             groupId 'com.enefce.libraries' // Replace with group ID
             artifactId getArtifactId()
             version getVersionName()
-            artifact("$buildDir/outputs/aar/${getArtifactId()}-release.aar")
+            android.libraryVariants.all { variant ->
+                variant.outputs.all { output ->
+                    artifact("${getArtifactId()}-${output.baseName}-${getVersionName()}.aar")
+                }
+            }
         }
     }
 
