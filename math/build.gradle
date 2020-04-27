@@ -48,11 +48,7 @@ publishing {
             groupId 'com.enefce.libraries' // Replace with group ID
             artifactId getArtifactId()
             version getVersionName()
-            android.libraryVariants.all { variant ->
-                variant.outputs.all { output ->
-                    artifact("$buildDir/outputs/aar/${getArtifactId()}-${output.baseName}-${getVersionName()}.aar")
-                }
-            }
+            artifact("$buildDir/outputs/aar/${getArtifactId()}-release-${getVersionName()}.aar")
         }
     }
 
