@@ -18,7 +18,7 @@ This Android project showcases the steps to publish and consume Android Librarie
       - After Generating make sure to copy your new personal access token. You won’t be able to see it again!
 
    - ## `Step 2` Store your GitHub - Personal Access Token details
-      - Create a `github.properties` file within your root Android project
+      - Create a *`github.properties`* file within your root Android project
       - In case of a public repository make sure you  add this file to .gitignore to keep the token private
       - Add properties `gpr.usr`=*`GITHUB_USERID`* and `gpr.key`=*`PERSONAL_ACCESS_TOKEN`*
       - Replace *`GITHUB_USERID`* with personal / organisation Github UserID and *`PERSONAL_ACCESS_TOKEN`* with the token generated in [*`Step 1`*](#step-1-generate-a-personal-access-token-for-github)
@@ -108,7 +108,7 @@ This Android project showcases the steps to publish and consume Android Librarie
       - After Generating make sure to copy your new personal access token. You won’t be able to see it again!
 
    - ## `Step 2` Store your GitHub - Personal Access Token details
-      - Create a `github.properties` file within your root Android project
+      - Create a *`github.properties`* file within your root Android project
       - In case of a public repository make sure you  add this file to .gitignore to keep the token private
       - Add properties `gpr.usr`=*`GITHUB_USERID`* and `gpr.key`=*`PERSONAL_ACCESS_TOKEN`*
       - Replace *`GITHUB_USERID`* with personal / organisation Github UserID and *`PERSONAL_ACCESS_TOKEN`* with the token generated in [*`Step 1`*](#step-1-generate-a-personal-access-token-for-github-1)
@@ -144,7 +144,7 @@ This Android project showcases the steps to publish and consume Android Librarie
          }
          ```
 
-      - inside dependencies of the `build.gradle` of app module, use the following code
+      - inside dependencies of the *`build.gradle`* of app module, use the following code
          
          ```gradle
          dependencies {
